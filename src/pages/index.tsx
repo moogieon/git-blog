@@ -5,7 +5,7 @@ import React, { FC } from 'react'
 const IndexPage: FC = function () {
   return (
     <>
-      <div className="overflow-x-hidden flex flex-col">
+      <div>
         <Introduction />
         <Link to="/info/">To Info</Link>
       </div>

@@ -4,9 +4,8 @@ import ProfileImage from 'components/Main/ProfileImage'
 const Introduction: FC = function () {
   return (
     <div
-      className="container"
+      className="w-full"
       style={{
-        overflowX: 'hidden',
         backgroundImage: 'linear-gradient(60deg, #29323c 0%, #485563 100%)',
       }}
     >
