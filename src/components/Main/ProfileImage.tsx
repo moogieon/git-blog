@@ -9,7 +9,7 @@ const ProfileImage: FC = function () {
     <img
       src={PROFILE_IMAGE_LINK}
       alt="Profile Image"
-      className="rounded-full h-48 w-48"
+      className="rounded-full h-48 w-50"
     />
   )
 }
