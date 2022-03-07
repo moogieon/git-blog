@@ -14,12 +14,14 @@ const CategoryList: FC<CategoryListProps> = function ({
 }) {
   return (
     <>
-      <div className='flex flex-wrap w-768px m-auto'>
-        {Object.entries(categoryList).map(([name, count]) => (
-          <div key={name} className="mr-[20px] py[5px] ">
-            #{name}({count})
-          </div>
-        ))}
+      <div>
+        <div className="flex flex-wrap w-768px m-auto container">
+          {Object.entries(categoryList).map(([name, count]) => (
+            <div key={name} className="mr-[20px] py[5px] ">
+              #{name}({count})
+            </div>
+          ))}
+        </div>
       </div>
     </>
   )
