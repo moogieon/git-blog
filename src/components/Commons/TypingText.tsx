@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 const TypingText: React.FC = () => {
-  const txt = '오늘은 뭐 먹지?'
+  const txt = 'Lee Chang Mook'
   const [Text, setText] = useState('')
   const [Count, setCount] = useState(0)
   useEffect(() => {

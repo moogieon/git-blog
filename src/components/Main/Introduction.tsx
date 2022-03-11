@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import ProfileImage from 'components/Main/ProfileImage'
+import TypingText from 'components/Commons/TypingText'
 
 const Introduction: FC = function () {
   return (
@@ -14,6 +15,7 @@ const Introduction: FC = function () {
           <div className="mt-10 text-white">
             <div>Nice to Meet You,</div>
             <div className="text-2xl">I'm Junior Frontend Developer </div>
+            <TypingText/>
           </div>
         </div>
       </div>
