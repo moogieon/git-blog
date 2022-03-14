@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
+
 const TypingText: React.FC = () => {
   const txt = 'Lee Chang Mook'
   const [Text, setText] = useState('')
@@ -16,7 +17,14 @@ const TypingText: React.FC = () => {
     return () => clearInterval(interval) // 언마운트시 setInterval을 해제합니다
   })
 
-  return <p className="text">{Text}</p>
+  return (
+    <p className="text">
+      <span className="font-pay font-bold">
+        {Text}
+        <span className="blink font-sans font-normal">|</span>
+      </span>
+    </p>
+  )
 }
 
 export default TypingText
