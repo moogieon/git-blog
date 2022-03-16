@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-
 const TypingText: React.FC = () => {
   const txt = 'Lee Chang Mook'
   const [Text, setText] = useState('')
@@ -9,7 +8,7 @@ const TypingText: React.FC = () => {
     const interval = setInterval(() => {
       setText(Text + txt[Count]) // 이전 set한 문자 + 다음 문자
       setCount(Count + 1) // 개수 만큼 체크
-    }, 100)
+    }, 150)
     if (Count === txt.length) {
       // Count를 따로 두지 않고 Text.length 체크도 가능
       clearInterval(interval) // 문자열 체크를 통해 setInterval을 해제합니다
@@ -20,7 +19,7 @@ const TypingText: React.FC = () => {
   return (
     <p className="text">
       <span className="font-pay font-bold">
-        {Text}
+        {Text}..
         <span className="blink font-sans font-normal">|</span>
       </span>
     </p>

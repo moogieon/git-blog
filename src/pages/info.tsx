@@ -1,12 +1,14 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 
 type InfoPageProps = {}
 
-const InfoPage: FC<InfoPageProps> = function () {
+const InfoPage: React.FC<InfoPageProps> = function () {
   return (
-    <div>
-      <Link to="/">To Main</Link>
+    <div className="bg-gray-300">
+      <div className="container mx-auto">
+        <Link to="/">To Main</Link>
+      </div>
     </div>
   )
 }

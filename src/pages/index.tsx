@@ -1,14 +1,14 @@
 import CategoryList from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
 import { Link } from 'gatsby'
-import React, { FC } from 'react'
+import React from 'react'
 
 const CATEGORY_LIST = {
   All: 5,
   Web: 3,
   Mobile: 2,
 }
-const IndexPage: FC = function () {
+const IndexPage: React.FC = function () {
   return (
     <>
       <div>

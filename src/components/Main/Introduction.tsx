@@ -5,17 +5,18 @@ import TypingText from 'components/Commons/TypingText'
 const Introduction: FC = function () {
   return (
     <header
+      className="py-20"
       style={{
         backgroundImage: 'linear-gradient(60deg, #29323c 0%, #485563 100%)',
       }}
     >
-      <div className="p-20 flex container mx-auto">
+      <div className="flex justify-start container mx-auto">
         <div className="ml-[15%]">
           <ProfileImage />
           <div className="mt-10 text-white">
             <div>Nice to Meet You,</div>
             <div className="text-2xl">I'm Junior Frontend Developer </div>
-            <TypingText/>
+            <TypingText />
           </div>
         </div>
       </div>
