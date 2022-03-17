@@ -4,9 +4,8 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 const CATEGORY_LIST = {
-  All: 5,
-  Web: 3,
-  Mobile: 2,
+  Project: 4,
+  Blog:5,
 }
 const IndexPage: React.FC = function () {
   return (
