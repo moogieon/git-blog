@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 export type CategoryListProps = {
   selectedCategory: string
@@ -8,19 +8,21 @@ export type CategoryListProps = {
   }
 }
 
-const CategoryList: FC<CategoryListProps> = function ({
+const CategoryList: React.FC<CategoryListProps> = function ({
   selectedCategory,
   categoryList,
 }) {
   return (
     <>
-      <div className="py-20 border-b ">
-        <div className="flex justify-around w-768px mx-auto container ">
-          {Object.entries(categoryList).map(([name, count]) => (
-            <div key={name} className="mr-[20px] py[5px] ">
-              #{name}({count})
-            </div>
-          ))}
+      <div className="py-20 ">
+        <div className="mx-auto container">
+          <div className="flex flex-wrap">
+            {Object.entries(categoryList).map(([name, count]) => (
+              <div key={name} className="mr-[20px] py[5px] cursor-pointer ">
+                #{name}({count})
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

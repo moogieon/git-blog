@@ -11,7 +11,7 @@ const Introduction: FC = function () {
       }}
     >
       <div className="flex justify-start container mx-auto">
-        <div className="ml-[15%]">
+        <div>
           <ProfileImage />
           <div className="mt-10 text-white">
             <div>Nice to Meet You,</div>
