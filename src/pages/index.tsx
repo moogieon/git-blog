@@ -7,7 +7,7 @@ import React from 'react'
 const CATEGORY_LIST = {
   All: 5,
   Web: 3,
-  Mobile:2,
+  Mobile: 2,
 }
 const IndexPage: React.FC = function () {
   return (
@@ -16,7 +16,7 @@ const IndexPage: React.FC = function () {
         <Introduction />
         <CategoryList selectedCategory="Web" categoryList={CATEGORY_LIST} />
         <Link to="/info/">To Info</Link>
-        <Footer/>
+        <Footer />
       </div>
     </>
   )

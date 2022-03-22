@@ -3,6 +3,11 @@ import ProfileImage from 'components/Main/ProfileImage'
 import TypingText from 'components/Commons/TypingText'
 
 const Introduction: FC = function () {
+  const CATEGORY_LIST = [
+    { name: 'GITHUB', herf: 'dd' },
+    { name: 'PORTFOLIEO', herf: 'dd' },
+  ]
+
   return (
     <header
       className="py-20"
@@ -19,10 +24,11 @@ const Introduction: FC = function () {
             <TypingText />
           </div>
         </div>
-        <div>
-          <div>GIT-HUB</div>
-          <div>PORTFOLIO</div>
-        </div>
+        <ul>
+          {CATEGORY_LIST.map((data, idx) => (
+            <li key={idx}>{data.name}</li>
+          ))}
+        </ul>
       </div>
     </header>
   )
