@@ -5,6 +5,16 @@ const TypingText: React.FC = () => {
   const [Text, setText] = useState('')
   const [Count, setCount] = useState(0)
   useEffect(() => {
+          // setInterval(() => {
+      //   i += 1
+      //   if (i < contents.length) {
+      //     inputEl = contents[i]
+      //   } else if (i > contents.length + 5) {
+      //     i = -1
+      //   } else if (i === contents.length) {
+      //     isSlide = true
+      //   }
+      // }, 300)
     const interval = setInterval(() => {
       setText(Text + txt[Count]) // 이전 set한 문자 + 다음 문자
       setCount(Count + 1) // 개수 만큼 체크
