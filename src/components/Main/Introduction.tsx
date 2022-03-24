@@ -4,8 +4,8 @@ import TypingText from 'components/Commons/TypingText'
 
 const Introduction: FC = function () {
   const CATEGORY_LIST = [
-    { name: 'GITHUB', herf: 'dd' },
-    { name: 'PORTFOLIEO', herf: 'dd' },
+    { img: '', name: 'GITHUB', herf: 'https://github.com/moogieon' },
+    { img: '', name: 'PORTFOLIEO', herf: 'dd' },
   ]
 
   return (
@@ -26,7 +26,9 @@ const Introduction: FC = function () {
         </div>
         <ul>
           {CATEGORY_LIST.map((data, idx) => (
-            <li key={idx}>{data.name}</li>
+            <a key={idx} href={data.herf}>
+              {data.name}
+            </a>
           ))}
         </ul>
       </div>
