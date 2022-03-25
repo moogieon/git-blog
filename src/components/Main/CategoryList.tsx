@@ -1,4 +1,5 @@
 import React from 'react'
+import CategoryItem from './CategoryItem'
 
 export type CategoryListProps = {
   selectedCategory: string
@@ -18,9 +19,13 @@ const CategoryList: React.FC<CategoryListProps> = function ({
         <div className="mx-auto container">
           <div className="flex flex-wrap">
             {Object.entries(categoryList).map(([name, count]) => (
-              <div key={name} className="mr-[20px] py[5px] cursor-pointer ">
+              <CategoryItem
+                key={name}
+                to={`/?category=${name}`}
+                active={name === selectedCategory}
+              >
                 #{name}({count})
-              </div>
+              </CategoryItem>
             ))}
           </div>
         </div>

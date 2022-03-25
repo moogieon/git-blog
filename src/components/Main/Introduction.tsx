@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
+import React from 'react'
 import ProfileImage from 'components/Main/ProfileImage'
 import TypingText from 'components/Commons/TypingText'
 
-const Introduction: FC = function () {
+const Introduction: React.FC = function () {
   const CATEGORY_LIST = [
     { img: '', name: 'GITHUB', herf: 'https://github.com/moogieon' },
     { img: '', name: 'PORTFOLIEO', herf: 'dd' },
