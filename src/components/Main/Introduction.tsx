@@ -4,7 +4,7 @@ import TypingText from 'components/Commons/TypingText'
 
 const Introduction: React.FC = function () {
   const CATEGORY_LIST = [
-    { img: '', name: 'GITHUB', herf: 'https://github.com/moogieon' },
+    { img: '', name: 'GITHUB', herf: 'https://github.com/moogieon'},
     { img: '', name: 'PORTFOLIEO', herf: 'dd' },
   ]
 
@@ -24,9 +24,9 @@ const Introduction: React.FC = function () {
             <TypingText />
           </div>
         </div>
-        <ul>
+        <ul className="flex flex-col">
           {CATEGORY_LIST.map((data, idx) => (
-            <a key={idx} href={data.herf}>
+            <a key={idx} href={data.herf} className="mb-10">
               {data.name}
             </a>
           ))}
