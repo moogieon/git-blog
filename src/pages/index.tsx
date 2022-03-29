@@ -1,6 +1,7 @@
 import Footer from 'components/Commons/Footer'
 import CategoryList from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
+import PostList from 'components/Main/PostList'
 import { Link } from 'gatsby'
 import React from 'react'
 
@@ -15,7 +16,8 @@ const IndexPage: React.FC = function () {
       <div>
         <Introduction />
         <CategoryList selectedCategory="Web" categoryList={CATEGORY_LIST} />
-        <Link to="/info/">To Info</Link>
+        <PostList/>
+        {/* <Link to="/info/">To Info</Link> */}
         <Footer />
       </div>
     </>
