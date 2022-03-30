@@ -14,11 +14,13 @@ const PostList: React.FC = function () {
   }
   return (
     <>
-      <div className="mx-auto container grid grid-cols-[1fr,1fr] gap-[20px] w-[768px] pt-[50px] pb-[100px]">
-        <PostItem {...POST_ITEM_DATA} />
-        <PostItem {...POST_ITEM_DATA} />
-        <PostItem {...POST_ITEM_DATA} />
-        <PostItem {...POST_ITEM_DATA} />
+      <div className='mx-auto container px-[15%]'>
+        <div className="grid grid-cols-[1fr,1fr] gap-[20px] pt-[50px] pb-[100px]">
+          <PostItem {...POST_ITEM_DATA} />
+          <PostItem {...POST_ITEM_DATA} />
+          <PostItem {...POST_ITEM_DATA} />
+          <PostItem {...POST_ITEM_DATA} />
+        </div>
       </div>
     </>
   )

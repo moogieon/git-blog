@@ -10,12 +10,12 @@ const Introduction: React.FC = function () {
 
   return (
     <header
-      className="py-20"
+      className="py-20 "
       style={{
         backgroundImage: 'linear-gradient(60deg, #29323c 0%, #485563 100%)',
       }}
     >
-      <div className="flex justify-between container mx-auto">
+      <div className="flex justify-between container mx-auto px-[15%]">
         <div>
           <ProfileImage />
           <div className="mt-10 text-white">

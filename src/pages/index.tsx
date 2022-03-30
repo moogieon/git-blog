@@ -12,7 +12,7 @@ const CATEGORY_LIST = {
 const IndexPage: React.FC = function () {
   return (
     <>
-      <div>
+      <div >
         <Introduction />
         <CategoryList selectedCategory="Web" categoryList={CATEGORY_LIST} />
         <PostList />
