@@ -19,7 +19,10 @@ const PostItem: React.FC<PostItemProps> = function ({
   link,
 }) {
   return (
-    <Link className="flex flex-col rounded-[10px]  border cursor-pointer transition-shadow shadow-lg hover:shadow-2xl">
+    <Link
+      className="flex flex-col rounded-[10px] border cursor-pointer transition-shadow shadow-lg hover:shadow-2xl"
+      to={link}
+    >
       <img
         className="w-full h-[200px] border rounded-t-[10px] rounded-r-[10px] object-cover"
         src={thumbnail}
@@ -29,12 +32,18 @@ const PostItem: React.FC<PostItemProps> = function ({
         <h1 className="line-clamp-2 mb-[3px] whitespace-normal font-700 text-xl">
           {title}
         </h1>
-        <p className="text-sm font-400 opacity-[0.7]">{date}</p>
-        <div className="flex flex-wrap mt-[10px] mx-[-5px] my-[10px]">
-          {categories}
+        <p className="text-sm font-400 opacity-50">{date}</p>
+        <div className="flex flex-wrap mx-[-5px] my-[10px]">
+          {categories.map((categorie, idx) => (
+            <p
+              key={idx}
+              className="my-[2.5px] mx-[5px] py-[3px] px-[5px] rounded-[3px] border bg-black text-sm font-700 text-white "
+            >
+              {categorie}
+            </p>
+          ))}
         </div>
-        <p className=""></p>
-        <p className=""></p>
+        <p className="line-clamp-2  opacity-80">{summary}</p>
       </div>
     </Link>
   )

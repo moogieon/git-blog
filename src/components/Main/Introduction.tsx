@@ -15,7 +15,7 @@ const Introduction: React.FC = function () {
         backgroundImage: 'linear-gradient(60deg, #29323c 0%, #485563 100%)',
       }}
     >
-      <div className="flex justify-between container mx-auto px-[15%]">
+      <div className="flex justify-between container mx-auto px-[10%]">
         <div>
           <ProfileImage />
           <div className="mt-10 text-white">
