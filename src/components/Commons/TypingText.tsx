@@ -20,7 +20,7 @@ const TypingText: React.FC = () => {
   })
 
   return (
-    <p className="text">
+    <p className="md:text-sm">
       <span className="font-pay font-bold">
         {Text}..
         <span className="blink font-sans font-normal">|</span>

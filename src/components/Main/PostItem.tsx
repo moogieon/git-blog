@@ -24,7 +24,7 @@ const PostItem: React.FC<PostItemProps> = function ({
       to={link}
     >
       <img
-        className="w-full h-[200px] border rounded-t-[10px] rounded-r-[10px] object-cover"
+        className="w-full h-[200px] rounded-t-[10px] rounded-r-[10px] object-cover"
         src={thumbnail}
         alt="Post Item Image"
       />

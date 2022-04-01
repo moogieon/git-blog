@@ -16,7 +16,7 @@ const CategoryList: React.FC<CategoryListProps> = function ({
   return (
     <>
       <div className="py-20 ">
-        <div className="mx-auto container px-[10%]">
+        <div className="mx-auto container md:px-[10%]">
           <div className="flex flex-wrap">
             {Object.entries(categoryList).map(([name, count]) => (
               <CategoryItem
