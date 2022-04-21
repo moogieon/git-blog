@@ -1,21 +1,16 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-type PostItemProps = {
-  title: string
-  date: string
-  categories: string[]
-  summary: string
-  thumbnail: string
-  link: string
-}
+import { PostFrontmatterType } from 'types/PostItem.types'
+
+type PostItemProps = PostFrontmatterType & { link: string }
 
 const PostItem: React.FC<PostItemProps> = function ({
   title,
   date,
   categories,
   summary,
-  thumbnail,
+  thumbnail: { publicURL },
   link,
 }) {
   return (
@@ -25,7 +20,7 @@ const PostItem: React.FC<PostItemProps> = function ({
     >
       <img
         className="w-full h-[200px] rounded-t-[10px] rounded-r-[10px] object-cover"
-        src={thumbnail}
+        src={publicURL}
         alt="Post Item Image"
       />
       <div className="flex-1 flex flex-col p-[15px]">
