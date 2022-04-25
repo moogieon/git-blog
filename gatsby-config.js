@@ -9,16 +9,24 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     'gatsby-plugin-postcss',
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `contents`,
         path: `${__dirname}/contents`,
-      },   
+      },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: ['auto', 'webp'],
+          quality: 100,
+          placeholder: 'blurred',
+        },
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
