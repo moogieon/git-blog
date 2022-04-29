@@ -14,3 +14,10 @@
     opacity: 0;
   }
 }
+
+.parent:hover .child1 {
+  opacity: 0.25;
+}
+.parent:hover .child2 {
+  transform: scale(1.25);
+}

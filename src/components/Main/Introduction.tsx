@@ -1,8 +1,13 @@
 import React from 'react'
 import ProfileImage from 'components/Main/ProfileImage'
 import TypingText from 'components/Commons/TypingText'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
-const Introduction: React.FC = function () {
+type IntroductionProps = {
+  profileImage: IGatsbyImageData
+}
+
+const Introduction: React.FC<IntroductionProps> = function ({profileImage}) {
   const CATEGORY_LIST = [
     { img: '', name: 'GITHUB', herf: 'https://github.com/moogieon' },
     { img: '', name: 'PORTFOLIEO', herf: 'dd' },
@@ -17,7 +22,7 @@ const Introduction: React.FC = function () {
     >
       <div className="flex justify-between container mx-auto md:px-[10%]">
         <div>
-          <ProfileImage />
+          <ProfileImage profileImage={profileImage} />
           <div className="mt-10 text-white md:text-sm">
             <div>Nice to Meet You,</div>
             <div className="text-2xl  md:text-xl">

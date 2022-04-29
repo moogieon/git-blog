@@ -5,11 +5,17 @@ import PostList from 'components/Main/PostList'
 import React from 'react'
 import { graphql } from 'gatsby'
 import { PostListItemType } from 'types/PostItem.types'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 type IndexPageProps = {
   data: {
     allMarkdownRemark: {
       edges: PostListItemType[]
+    }
+    file: {
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+      }
     }
   }
 }
@@ -22,12 +28,15 @@ const CATEGORY_LIST = {
 const IndexPage: React.FC<IndexPageProps> = function ({
   data: {
     allMarkdownRemark: { edges },
+    file: {
+      childImageSharp: { gatsbyImageData },
+    },
   },
 }) {
   return (
     <>
       <div>
-        <Introduction />
+        <Introduction profileImage={gatsbyImageData} />
         <CategoryList selectedCategory="Web" categoryList={CATEGORY_LIST} />
         <PostList posts={edges} />
         <Footer />
@@ -60,6 +69,10 @@ export const getPostList = graphql`
         }
       }
     }
+    file(name: { eq: "profile-image" }) {
+      childImageSharp {
+        gatsbyImageData(width: 120, height: 120)
+      }
+    }
   }
 `
-

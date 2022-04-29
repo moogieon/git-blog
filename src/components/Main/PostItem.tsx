@@ -1,7 +1,6 @@
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
-
 import { PostFrontmatterType } from 'types/PostItem.types'
 
 type PostItemProps = PostFrontmatterType & { link: string }
@@ -18,15 +17,17 @@ const PostItem: React.FC<PostItemProps> = function ({
 }) {
   return (
     <Link
-      className="flex flex-col rounded-[10px] border cursor-pointer transition-shadow shadow-lg hover:shadow-2xl"
+      className="parent flex flex-col rounded-[10px] cursor-pointer transition-shadow shadow-lg hover:shadow-2xl"
       to={link}
     >
-      <GatsbyImage
-        className="w-full h-[200px] rounded-t-[10px] rounded-r-[10px] object-cover"
-        image={gatsbyImageData}
-        alt="Post Item Image"
-      />
-
+      <div className="h-[200px] w-full rounded-t-[10px] overflow-hidden relative">
+        <div className="child1 w-full h-full  absolute inset-0 z-10 bg-black transition duration-700 transform  opacity-0" />
+        <GatsbyImage
+          className="w-full h-full transition duration-700 child2"
+          image={gatsbyImageData}
+          alt="Post Item Image"
+        />
+      </div>
       <div className="flex-1 flex flex-col p-[15px]">
         <h1 className="line-clamp-2 mb-[3px] whitespace-normal font-700 text-xl">
           {title}
