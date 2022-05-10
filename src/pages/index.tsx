@@ -1,8 +1,8 @@
-import Footer from 'components/Commons/Footer'
-import CategoryList from 'components/Main/CategoryList'
+import React, { useMemo } from 'react'
+import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
 import PostList from 'components/Main/PostList'
-import React from 'react'
+import Footer from 'components/Commons/Footer'
 import { graphql } from 'gatsby'
 import { PostListItemType } from 'types/PostItem.types'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
@@ -24,11 +24,6 @@ type IndexPageProps = {
   }
 }
 
-const CATEGORY_LIST = {
-  All: 5,
-  Web: 3,
-  Mobile: 2,
-}
 const IndexPage: React.FC<IndexPageProps> = function ({
   location: { search },
   data: {
@@ -44,13 +39,38 @@ const IndexPage: React.FC<IndexPageProps> = function ({
       ? 'All'
       : parsed.category
 
+  const categoryList = useMemo(
+    () =>
+      edges.reduce(
+        (
+          list: CategoryListProps['categoryList'],
+          {
+            node: {
+              frontmatter: { categories },
+            },
+          }: PostListItemType,
+        ) => {
+          categories.forEach(category => {
+            if (list[category] === undefined) list[category] = 1
+            else list[category]++
+          })
+
+          list['All']++
+
+          return list
+        },
+        { All: 0 },
+      ),
+    [],
+  )
+
   return (
     <>
       <div>
         <Introduction profileImage={gatsbyImageData} />
         <CategoryList
           selectedCategory={selectedCategory}
-          categoryList={CATEGORY_LIST}
+          categoryList={categoryList}
         />
         <PostList posts={edges} />
         <Footer />
