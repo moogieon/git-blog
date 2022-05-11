@@ -72,7 +72,7 @@ const IndexPage: React.FC<IndexPageProps> = function ({
           selectedCategory={selectedCategory}
           categoryList={categoryList}
         />
-        <PostList posts={edges} />
+        <PostList posts={edges} selectedCategory={selectedCategory} />
         <Footer />
       </div>
     </>
