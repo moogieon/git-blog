@@ -66,7 +66,7 @@ const IndexPage: React.FC<IndexPageProps> = function ({
 
   return (
     <>
-      <div>
+      <div className="flex flex-col h-[100vh]">
         <Introduction profileImage={gatsbyImageData} />
         <CategoryList
           selectedCategory={selectedCategory}
