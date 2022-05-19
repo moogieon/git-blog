@@ -24,13 +24,17 @@ const PostList: React.FC<PostListProps> = function ({
         className="grid grid-cols-[1fr,1fr] gap-[20px] pt-[50px] pb-[100px] md:grid-cols-1 md:pt-[0px] md:px-[10%]"
         ref={containerRef}
       >
-        {postList.map(({ node: { id, frontmatter } }: PostListItemType) => (
-          <PostItem
-            {...frontmatter}
-            link="https://www.google.co.kr/"
-            key={id}
-          />
-        ))}
+        {postList.map(
+          ({
+            node: {
+              id,
+              fields: { slug },
+              frontmatter,
+            },
+          }: PostListItemType) => (
+            <PostItem {...frontmatter} link={slug} key={id} />
+          ),
+        )}
       </div>
     </div>
   )
