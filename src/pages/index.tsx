@@ -2,11 +2,11 @@ import React, { useMemo } from 'react'
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
 import PostList from 'components/Main/PostList'
-import Footer from 'components/Commons/Footer'
 import { graphql } from 'gatsby'
 import { PostListItemType } from 'types/PostItem.types'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import queryString, { ParsedQuery } from 'query-string'
+import Template from 'components/Commons/Template'
 
 type IndexPageProps = {
   location: {
@@ -65,17 +65,14 @@ const IndexPage: React.FC<IndexPageProps> = function ({
   )
 
   return (
-    <>
-      <div className="flex flex-col h-[100vh]">
-        <Introduction profileImage={gatsbyImageData} />
-        <CategoryList
-          selectedCategory={selectedCategory}
-          categoryList={categoryList}
-        />
-        <PostList posts={edges} selectedCategory={selectedCategory} />
-        <Footer />
-      </div>
-    </>
+    <Template>
+      <Introduction profileImage={gatsbyImageData} />
+      <CategoryList
+        selectedCategory={selectedCategory}
+        categoryList={categoryList}
+      />
+      <PostList posts={edges} selectedCategory={selectedCategory} />
+    </Template>
   )
 }
 
