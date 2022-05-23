@@ -1,13 +1,53 @@
 import Template from 'components/Commons/Template'
+import PostHead from 'components/Post/PostHead'
 import { graphql } from 'gatsby'
 import React from 'react'
+import { PostFrontmatterType } from 'types/PostItem.types'
 
-type PostTemplateProps = {}
+export type PostPageItemType = {
+  node: {
+    html: string
+    frontmatter: PostFrontmatterType
+  }
+}
+type PostTemplateProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: PostPageItemType[] // 존재하지 않는 타입이므로 에러가 발생하지만 일단 작성해주세요
+    }
+  }
+}
 
-const PostTemplate: React.FC<PostTemplateProps> = function (props) {
-  console.log(props)
+const PostTemplate: React.FC<PostTemplateProps> = function ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) {
+  const {
+    node: {
+      html,
+      frontmatter: {
+        title,
+        summary, // 나중에 사용할 예정입니다!
+        date,
+        categories,
+        thumbnail: {
+          childImageSharp: { gatsbyImageData },
+        },
+      },
+    },
+  } = edges[0]
 
-  return <Template>Post Template</Template>
+  return (
+    <Template>
+      <PostHead
+        title={title}
+        date={date}
+        categories={categories}
+        thumbnail={gatsbyImageData}
+      />
+    </Template>
+  )
 }
 
 export default PostTemplate
