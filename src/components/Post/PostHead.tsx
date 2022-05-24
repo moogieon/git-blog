@@ -1,5 +1,6 @@
 import React from 'react'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import PostHeadInfo, { PostHeadInfoProps } from './PostHeadInfo'
 
 type GatsbyImgProps = {
   image: IGatsbyImageData
@@ -7,12 +8,12 @@ type GatsbyImgProps = {
   className?: string
 }
 
-type PostHeadProps = {
+type PostHeadProps = PostHeadInfoProps & {
   thumbnail: IGatsbyImageData
 }
 
 const PostHead: React.FC<PostHeadProps> = function (
-  { thumbnail },
+  { thumbnail, title, date, categories },
   props: GatsbyImgProps,
 ) {
   return (
@@ -21,8 +22,9 @@ const PostHead: React.FC<PostHeadProps> = function (
         {...props}
         image={thumbnail}
         alt="thumbnail"
-        className="!absolute -z-1 w-full h-[400px] bg-cover brightness-[0.25]"
+        className="!absolute -z-10 w-full h-[400px] bg-cover brightness-[0.3]"
       />
+      <PostHeadInfo title={title} date={date} categories={categories} />
     </div>
   )
 }
