@@ -7,7 +7,7 @@ type TemplateProps = {
 
 const Template: React.FC<TemplateProps> = function ({ children }) {
   return (
-    <div className="flex flex-col h-[100vh]">
+    <div className="flex flex-col">
       {children}
       <Footer />
     </div>

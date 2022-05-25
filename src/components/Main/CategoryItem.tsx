@@ -10,7 +10,7 @@ const CategoryItem: React.FC<CategoryItem> = function ({ active, ...props }) {
   return (
     <Link
       {...props}
-      className={`mr-[20px] py[5px] cursor-pointer ${
+      className={`cursor-pointer hover:font-bold ${
         active ? 'font-bold' : 'font-base'
       }`}
     />

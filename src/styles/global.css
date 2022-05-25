@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .blink {
   animation: blink 0.7s infinite;
   animation-timing-function: step-start;
