@@ -1,7 +1,7 @@
 import React, { createRef, useEffect } from 'react'
 
 const src = 'https://utteranc.es/client.js'
-const repo = 'moogieon/git-blog.github.io'
+const repo = 'moogieon/git-blog'
  // 자신 계정의 레포지토리로 설정
 
 type UtterancesAttributesType = {
@@ -39,7 +39,7 @@ const CommentWidget: React.FC = function () {
     element.current.appendChild(utterances)
   }, [])
 
-  return <div ref={element} />
+  return <div className='w-full' ref={element} />
 }
 
 export default CommentWidget
