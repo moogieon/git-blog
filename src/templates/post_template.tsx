@@ -1,4 +1,5 @@
 import Template from 'components/Commons/Template'
+import CommentWidget from 'components/Post/CommentWidget'
 import PostContent from 'components/Post/PostContent'
 import PostHead from 'components/Post/PostHead'
 import { graphql } from 'gatsby'
@@ -48,6 +49,7 @@ const PostTemplate: React.FC<PostTemplateProps> = function ({
         thumbnail={gatsbyImageData}
       />
       <PostContent html={html} />
+      <CommentWidget />
     </Template>
   )
 }
