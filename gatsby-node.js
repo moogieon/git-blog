@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 const path = require('path')
+const FilterWarningsPlugin = require('webpack-filter-warnings-plugin')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Setup Import Alias
@@ -15,6 +16,12 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
 
   actions.setWebpackConfig({
     output,
+    plugins: [
+      new FilterWarningsPlugin({
+        exclude:
+          /mini-css-extract-plugin[^]*Conflicting order. Following module has been added:/,
+      }),
+    ],
     resolve: {
       alias: {
         components: path.resolve(__dirname, 'src/components'),
