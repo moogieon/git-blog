@@ -22,3 +22,7 @@
 .parent:hover .child2 {
   transform: scale(1.25);
 }
+
+.utterances {
+  max-width: 100% !important;
+}

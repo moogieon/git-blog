@@ -39,7 +39,7 @@ const CommentWidget: React.FC = function () {
     element.current.appendChild(utterances)
   }, [])
 
-  return <div className='w-full' ref={element} />
+  return <div className='container mx-auto md:px-[10%]' ref={element}/>
 }
 
 export default CommentWidget
