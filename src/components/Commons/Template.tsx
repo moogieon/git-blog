@@ -18,7 +18,7 @@ const Template: React.FC<TemplateProps> = function ({
   children,
 }) {
   return (
-    <div className="flex flex-col">
+    <main className="flex flex-col">
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -38,10 +38,11 @@ const Template: React.FC<TemplateProps> = function ({
         <meta name="twitter:image" content={image} />
         <meta name="twitter:site" content="@사용자이름" />
         <meta name="twitter:creator" content="@사용자이름" />
+        <html lang="ko" />
       </Helmet>
       {children}
       <Footer />
-    </div>
+    </main>
   )
 }
 
