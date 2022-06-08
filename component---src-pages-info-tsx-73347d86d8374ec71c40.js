@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[977],{3051:function(e,t,a){a.r(t);var r=a(7294),n=a(5444);t.default=function(){return r.createElement("div",{className:"bg-gray-300"},r.createElement("div",{className:"container mx-auto"},r.createElement(n.rU,{to:"/"},"To Main")))}}}]);
+//# sourceMappingURL=component---src-pages-info-tsx-73347d86d8374ec71c40.js.map
