@@ -3,7 +3,7 @@ module.exports = {
     title: `주니어 개발자의 개발 블로그`,
     description: `나만의 작은 메모장⭐️`,
     author: `Moogieon`,
-    siteUrl: 'https://[username].github.io/',
+    siteUrl: 'https://moogieon.github.io/',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
