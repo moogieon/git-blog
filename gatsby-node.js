@@ -34,13 +34,7 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
 // Generate a Slug Each Post Data
 exports.onCreateNode = async ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  if (node.path === '/') {
-    createPage({
-      path: '/page/*',
-      matchPath: '/page/:id',
-      component: path.resolve('src/pages/index.tsx'),
-    })
-  }
+
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode })
     createNodeField({ node, name: 'slug', value: slug })
