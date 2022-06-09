@@ -21,7 +21,7 @@ const PostItem: React.FC<PostItemProps> = function ({
       to={link}
     >
       <div className="h-[200px] w-full rounded-t-[10px] overflow-hidden relative">
-        <div className="child1 w-full h-full  absolute inset-0 z-10 bg-black transition duration-700 transform  opacity-0" />
+        <div className="child1 w-full h-full absolute inset-0 z-10 transition duration-700 transform opacity-0" />
         <GatsbyImage
           className="w-full h-full transition duration-700 child2"
           image={gatsbyImageData}

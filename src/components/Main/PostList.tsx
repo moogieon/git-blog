@@ -21,7 +21,7 @@ const PostList: React.FC<PostListProps> = function ({
   return (
     <div className="mx-auto container">
       <div
-        className="grid grid-cols-[1fr,1fr] gap-[20px] pt-[50px] pb-[100px] md:grid-cols-1 md:pt-[0px] md:px-[10%]"
+        className="grid grid-cols-[1fr,1fr] gap-[20px] pt-[50px] pb-[100px] md:grid-cols-1 md:pt-[0px] lg:px-[10%]"
         ref={containerRef}
       >
         {postList.map(

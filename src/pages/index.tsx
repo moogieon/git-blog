@@ -7,6 +7,7 @@ import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
 import PostList from 'components/Main/PostList'
 import Template from 'components/Commons/Template'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 type IndexPageProps = {
   location: {

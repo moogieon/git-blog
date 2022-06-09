@@ -18,13 +18,12 @@ const Template: React.FC<TemplateProps> = function ({
   children,
 }) {
   return (
-    <main className="flex flex-col">
+    <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
-
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -40,9 +39,9 @@ const Template: React.FC<TemplateProps> = function ({
         <meta name="twitter:creator" content="@사용자이름" />
         <html lang="ko" />
       </Helmet>
-      {children}
+      <main className="flex flex-col">{children}</main>
       <Footer />
-    </main>
+    </>
   )
 }
 

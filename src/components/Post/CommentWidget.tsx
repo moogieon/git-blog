@@ -1,7 +1,7 @@
 import React, { createRef, useEffect } from 'react'
 
 const src = 'https://utteranc.es/client.js'
-const repo = 'moogieon/git-blog'
+const repo = 'moogieon/moogieon.github.io'
  // 자신 계정의 레포지토리로 설정
 
 type UtterancesAttributesType = {

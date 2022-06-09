@@ -15,8 +15,8 @@ const CategoryList: React.FC<CategoryListProps> = function ({
 }) {
   return (
     <>
-      <div className="py-20 ">
-        <div className="mx-auto container md:px-[10%]">
+      <div className="pt-20 pb-10 md:py-10 ">
+        <div className="mx-auto container lg:px-[10%]">
           <div className="flex gap-4 w-full md:flex-wrap">
             {Object.entries(categoryList).map(([name, count]) => (
               <CategoryItem
@@ -24,7 +24,7 @@ const CategoryList: React.FC<CategoryListProps> = function ({
                 to={`/?category=${name}`}
                 active={name === selectedCategory}
               >
-                #{name}({count})
+                {name}({count})
               </CategoryItem>
             ))}
           </div>

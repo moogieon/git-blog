@@ -18,11 +18,13 @@
 
 .parent:hover .child1 {
   opacity: 0.25;
+  background-color:black;
 }
 .parent:hover .child2 {
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
 
 .utterances {
   max-width: 100% !important;
 }
+

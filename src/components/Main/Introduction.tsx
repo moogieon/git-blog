@@ -7,10 +7,14 @@ type IntroductionProps = {
   profileImage: IGatsbyImageData
 }
 
-const Introduction: React.FC<IntroductionProps> = function ({profileImage}) {
+const Introduction: React.FC<IntroductionProps> = function ({ profileImage }) {
   const CATEGORY_LIST = [
-    { img: '', name: 'GITHUB', herf: 'https://github.com/moogieon' },
-    { img: '', name: 'PORTFOLIEO', herf: 'dd' },
+    {
+      img: 'bi bi-github',
+      name: 'GITHUB',
+      herf: 'https://github.com/moogieon',
+    },
+    { img: 'bi bi-code-square ', name: 'PORTFOLIEO', herf: 'dd' },
   ]
 
   return (
@@ -20,7 +24,7 @@ const Introduction: React.FC<IntroductionProps> = function ({profileImage}) {
         backgroundImage: 'linear-gradient(60deg, #29323c 0%, #485563 100%)',
       }}
     >
-      <div className="flex justify-between container mx-auto md:px-[10%]">
+      <div className="flex justify-between container mx-auto lg:px-[10%]">
         <div>
           <ProfileImage profileImage={profileImage} />
           <div className="mt-10 text-white md:text-sm">
@@ -31,11 +35,14 @@ const Introduction: React.FC<IntroductionProps> = function ({profileImage}) {
             <TypingText />
           </div>
         </div>
-        <ul className="flex flex-col  md:text-xs">
+        <ul className="flex flex-col gap-10 md:text-xs">
           {CATEGORY_LIST.map((data, idx) => (
-            <a key={idx} href={data.herf} className="mb-10">
-              {data.name}
-            </a>
+            <div className="px-2 py-1 hover:animate-bounce flex gap-2">
+              <i className={`text-lg   md:text-base ${data.img}`}></i>
+              <a key={idx} href={data.herf} className="text-lg md:text-base">
+                {data.name}
+              </a>
+            </div>
           ))}
         </ul>
       </div>
