@@ -35,8 +35,13 @@ const Template: React.FC<TemplateProps> = function ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
-        <meta name="twitter:site" content="@사용자이름" />
-        <meta name="twitter:creator" content="@사용자이름" />
+        <meta name="twitter:site" content="moogieon" />
+        <meta name="twitter:creator" content="moogieon" />
+
+        <meta
+          name="google-site-verification"
+          content="웹 마스터 도구가 제공하는 Meta 태그"
+        />
         <html lang="ko" />
       </Helmet>
       <main className="flex flex-col">{children}</main>
