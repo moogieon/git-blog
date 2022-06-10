@@ -42,6 +42,10 @@ const Template: React.FC<TemplateProps> = function ({
           name="google-site-verification"
           content="mdyFsgu2fIO8epGmEI143Ff-j7fOZPkVXwzvL5ei_Us"
         />
+        <meta
+          name="naver-site-verification"
+          content="59495c99ab11df4d9014b88382accf5c60b725f6"
+        />
         <html lang="ko" />
       </Helmet>
       <main className="flex flex-col">{children}</main>
