@@ -40,7 +40,7 @@ const Template: React.FC<TemplateProps> = function ({
 
         <meta
           name="google-site-verification"
-          content="eMEzREUbJfBdFJw52sAoCJEHmIx3FgyuuFstDUqyi_s"
+          content="mdyFsgu2fIO8epGmEI143Ff-j7fOZPkVXwzvL5ei_Us"
         />
         <html lang="ko" />
       </Helmet>

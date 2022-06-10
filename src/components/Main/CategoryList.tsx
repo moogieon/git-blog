@@ -17,7 +17,7 @@ const CategoryList: React.FC<CategoryListProps> = function ({
     <>
       <div className="pt-20 pb-10 md:py-10 ">
         <div className="mx-auto container lg:px-[10%]">
-          <div className="flex gap-4 w-full md:flex-wrap">
+          <div className="flex gap-2 md:flex-wrap ">
             {Object.entries(categoryList).map(([name, count]) => (
               <CategoryItem
                 key={name}

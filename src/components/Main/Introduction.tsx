@@ -14,7 +14,6 @@ const Introduction: React.FC<IntroductionProps> = function ({ profileImage }) {
       name: 'GITHUB',
       herf: 'https://github.com/moogieon',
     },
-    { img: 'bi bi-code-square ', name: 'PORTFOLIEO', herf: 'dd' },
   ]
 
   return (
@@ -35,7 +34,7 @@ const Introduction: React.FC<IntroductionProps> = function ({ profileImage }) {
             <TypingText />
           </div>
         </div>
-        <ul className="flex flex-col gap-10 md:text-xs">
+        <ul className="md:text-xs">
           {CATEGORY_LIST.map((data, idx) => (
             <div className="px-2 py-1 hover:animate-bounce flex gap-2">
               <i className={`text-lg   md:text-base ${data.img}`}></i>

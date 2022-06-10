@@ -16,9 +16,15 @@
   }
 }
 
+.category:active {
+  letter-spacing: -0.88px;
+}
+.backbtn:active {
+  font-size: 20px;
+}
 .parent:hover .child1 {
   opacity: 0.25;
-  background-color:black;
+  background-color: black;
 }
 .parent:hover .child2 {
   transform: scale(1.15);
@@ -27,4 +33,3 @@
 .utterances {
   max-width: 100% !important;
 }
-

@@ -18,10 +18,10 @@ const PostHeadInfo: React.FC<PostHeadInfoProps> = function ({
   return (
     <div className="flex flex-col container h-full mx-auto px-[10%] py-[60px] text-[#ffffff] ">
       <button
-        className="grid place-items-center w-[40px] h-[40px] rounded-full bg-[#ffffff] text-[#000000] text-[22px]"
+        className="backbtn duration-75 grid place-items-center w-[40px] h-[40px] rounded-full bg-[#ffffff] text-[#000000] text-[22px]"
         onClick={goBackPage}
       >
-        <FontAwesomeIcon icon={faArrowLeft} className="" />
+        <FontAwesomeIcon icon={faArrowLeft} />
       </button>
       <div className="block overflow-hidden break-words mt-auto overflow-ellipsis line-clamp-2 text-[45px] font-[800] ">
         {title}
