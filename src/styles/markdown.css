@@ -1,5 +1,5 @@
 .markdown {
-  @apply leading-relaxed text-sm;
+  @apply leading-relaxed text-base;
 }
 
 @screen sm {

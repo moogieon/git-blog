@@ -14,6 +14,12 @@ const Introduction: React.FC<IntroductionProps> = function ({ profileImage }) {
       name: 'GITHUB',
       herf: 'https://github.com/moogieon',
     },
+    {
+      img: 'bi bi-book',
+      name: 'VELOG',
+      herf: 'https://velog.io/@moogieon',
+      className: 'text-[#20c997]',
+    },
   ]
 
   return (
@@ -37,8 +43,12 @@ const Introduction: React.FC<IntroductionProps> = function ({ profileImage }) {
         <ul className="md:text-xs">
           {CATEGORY_LIST.map((data, idx) => (
             <div className="px-2 py-1 hover:animate-bounce flex gap-2">
-              <i className={`text-lg   md:text-base ${data.img}`}></i>
-              <a key={idx} href={data.herf} className="text-lg md:text-base">
+              <i className={`text-lg   md:text-base ${data.className} ${data.img}`}></i>
+              <a
+                key={idx}
+                href={data.herf}
+                className={`font-semibold text-lg md:text-base ${data.className}`}
+              >
                 {data.name}
               </a>
             </div>
