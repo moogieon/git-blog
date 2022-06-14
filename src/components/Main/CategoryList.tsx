@@ -17,16 +17,21 @@ const CategoryList: React.FC<CategoryListProps> = function ({
     <>
       <div className="pt-20 pb-10 md:py-10 ">
         <div className="mx-auto container lg:px-[10%]">
-          <div className="flex gap-2 md:flex-wrap ">
-            {Object.entries(categoryList).map(([name, count]) => (
-              <CategoryItem
-                key={name}
-                to={`/?category=${name}`}
-                active={name === selectedCategory}
-              >
-                {name}({count})
-              </CategoryItem>
-            ))}
+          <div className="relative w-full block">
+            <div className="relative w-full block overflow-hidden overflow-x-auto">
+              <div className="w-full block py-2  relative whitespace-nowrap ">
+                {Object.entries(categoryList).map(([name, count]) => (
+                  <CategoryItem
+                    key={name}
+                    to={`/?category=${name}`}
+                    active={name === selectedCategory}
+                  >
+                    {name}({count})
+                  </CategoryItem>
+                ))}
+              </div>
+            </div>
+            <hr className="w-full" />
           </div>
         </div>
       </div>
