@@ -1,5 +1,5 @@
 ---
-date: '2022-04-04'
+date: '2022-03-04'
 title: 'ESM과 CommonJS'
 categories: ['ESM', 'CommonJS', 'Module']
 summary: '자바스크립트 모듈 시스템: ESM과 CommonJS'

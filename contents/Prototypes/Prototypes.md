@@ -1,5 +1,5 @@
 ---
-date: '2022-04-01'
+date: '2022-01-05'
 title: '프로토타입 가볍게 이해하기'
 categories: ['Prototype']
 summary: '프로토타입?! 들어는 봤음'

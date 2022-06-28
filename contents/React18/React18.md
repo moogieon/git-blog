@@ -1,5 +1,5 @@
 ---
-date: '2022-04-05'
+date: '2022-03-07'
 title: 'React18 변경사항'
 categories: ["React"]
 summary: 'React18에 새롭게 추가된 사항을 간단히 살펴보자!'
