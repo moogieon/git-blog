@@ -6,13 +6,12 @@ type ProfileImageProps = {
   profileImage: IGatsbyImageData
 }
 
-
-const ProfileImage: React.FC<ProfileImageProps> = function ({profileImage}) {
+const ProfileImage: React.FC<ProfileImageProps> = function ({ profileImage }) {
   return (
     <GatsbyImage
       image={profileImage}
       alt="Profile Image"
-      className="rounded-full p-4"
+      style={{ borderRadius: '50%' }}
     />
   )
 }
