@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://moogieon.github.io/sitemap/sitemap-index.xml
+Sitemap: https://moogieon.github.io/sitemap-index.xml
 Host: https://moogieon.github.io
